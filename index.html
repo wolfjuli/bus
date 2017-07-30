@@ -66,6 +66,30 @@
         </div>
 
 
+        <div id="parts">
+            <div class="header">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        Search
+                        <input type="text" name="search" id="search" >
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3">Name</div>
+                    <div class="col-xs-1 col-sm-1">Menge</div>
+                    <div class="col-xs-2 col-sm-2">Ort</div>
+                    <div class="col-xs-1 col-sm-1">Zustand</div>
+                    <div class="col-xs-4 col-sm-4">Anmerkung</div>
+                </div>
+
+            </div>
+
+            <div class="body" bind="parts">
+
+            </div>
+        </div>
+
     </div>
 
 <script type="text/javascript">
@@ -75,6 +99,7 @@
             $('#name').focus();
             $('#newPart').submit(newPart);
             loadPlaces();
+            loadParts();
         });
 
 

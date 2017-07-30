@@ -20,7 +20,6 @@ function newPart(event) {
         data: JSON.stringify(obj)
     }).done( function (event) {
         alert('success');
-        console.log(event);
     }).fail (function ( event ) {
         alert("error happened");
         console.log(event);

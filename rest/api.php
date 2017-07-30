@@ -1,5 +1,6 @@
 <?php
 
+error_reporting(0);
 // get the HTTP method, path and body of the request
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
@@ -42,7 +43,7 @@ switch ($method) {
   case 'POST':
     $sql = "insert into `$table`(" . implode(', ', $columns) . ") values (". $insert . ")"; break;
   case 'DELETE':
-    $sql = "delete `$table` where id=$key"; break;
+    $sql = "delete from `$table` where id=$key"; break;
 }
 
 // excecute SQL statement
@@ -51,11 +52,8 @@ $result = mysqli_query($link,$sql);
 // die if SQL statement failed
 if (!$result) {
     http_response_code(404);
-
     print_r($sql);
-    print_r($input);
     print_r(mysqli_error($link));
-  die(mysqli_error());
 }
 
 // print results, insert id or affected row count
