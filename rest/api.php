@@ -58,11 +58,12 @@ if (!$result) {
 
 // print results, insert id or affected row count
 if ($method == 'GET') {
-  if (!$key) echo '[';
+  echo '{';
   for ($i=0;$i<mysqli_num_rows($result);$i++) {
-    echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
+    $obj = mysqli_fetch_object($result);
+    echo ($i>0 ? ',' : '') . '"' . $obj->id . '":' . json_encode($obj);
   }
-  if (!$key) echo ']';
+  echo '}';
 } elseif ($method == 'POST') {
   echo mysqli_insert_id($link);
 } else {

@@ -13,6 +13,7 @@
 
     <script type="text/javascript" src="js/new.js"></script>
     <script type="text/javascript" src="js/load.js"></script>
+    <script type="text/javascript" src="js/edit.js"></script>
 
     <!-- Bootstrap -->
     <link href="css/tether.min.css" rel="stylesheet" type="text/css">
@@ -75,19 +76,20 @@
                     </div>
 
                 </div>
-                <div class="row">
-                    <div class="col-xs-3 col-sm-3">Name</div>
-                    <div class="col-xs-1 col-sm-1">Menge</div>
-                    <div class="col-xs-2 col-sm-2">Ort</div>
-                    <div class="col-xs-1 col-sm-1">Zustand</div>
-                    <div class="col-xs-4 col-sm-4">Anmerkung</div>
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Menge</th>
+                            <th>Ort</th>
+                            <th>Zustand</th>
+                            <th>Anmerkung</th>
+                        </tr>
+                    </thead>
+                    <tbody bind="parts">
 
-            </div>
-
-            <div class="body" bind="parts">
-
-            </div>
+                    </tbody>
+                </table>
         </div>
 
     </div>

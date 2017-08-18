@@ -1,0 +1,28 @@
+{
+  "name": "bus",
+  "version": "1.0.0",
+  "description": "Busteile Database",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolfjuli/bus.git"
+  },
+  "keywords": [
+    "bus",
+    "database",
+    "angular",
+    "geil"
+  ],
+  "author": "Julian Philipp Wolf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolfjuli/bus/issues"
+  },
+  "homepage": "https://github.com/wolfjuli/bus#readme",
+  "dependencies": {
+    "angular": "^1.6.5"
+  }
+}
